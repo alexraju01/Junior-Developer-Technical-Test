@@ -24,4 +24,40 @@ console.log(upperCase(arrayOfStrings));
 // So this solution is created assuming that the arry is fully
 // string and using map array function to loop for each items in the array
 
+//  ############ Question 4 ############
+console.log("Start");
+setTimeout(() => console.log("Timeout"), 0);
+console.log("End");
 
+// Answer: timeout will be last. This is because even though it says 0
+// There is still a small delay for the  code inside setTimeOut() to process
+// this is usually minimum  of 4ms set by the browser.
+
+//  ############ Question 5 & 6 ############
+const express = require("express");
+const app = express();
+const port = 3000;
+
+app.use(express.json());
+
+const users = [{ name: "Alice" }, { name: "Bob" }];
+
+app.get("/users", (req, res) => {
+	const listUsers = users.map((user) => user.name);
+	res.send(listUsers);
+});
+
+// ### Question 6 Answer #####
+app.post("/add-user", (req, res) => {
+	const user = { name: "Jonn" }; // Hard coded user
+
+	users.push(user); // add new user to array from Question 5 (users)
+	res.status(201).send({ message: "User added", users });
+});
+
+app.listen(port, () => {
+	console.log(`Example app listening on port http://localhost:${port}`);
+});
+// NOTE: Not too sure what you mean but this code under the assumption of just return user names as list
+// Answer: Just needed to map through the user array of objects
+// to return the list of users by their names e.g. [Alice, Bob]
