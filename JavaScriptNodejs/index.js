@@ -61,3 +61,36 @@ app.listen(port, () => {
 // NOTE: Not too sure what you mean but this code under the assumption of just return user names as list
 // Answer: Just needed to map through the user array of objects
 // to return the list of users by their names e.g. [Alice, Bob]
+
+//  ############ Question 7 ############
+
+const obj = { name: "Alice" };
+console.log(obj.toString());
+
+// Answer: This will cause an error beacuse the age
+// is not part of the object therefore it will be undefined causing an error
+
+//  ############ Question 8 ############
+function fetchData() {
+	return new Promise((resolve, reject) => {
+		setTimeout(() => resolve("data loaded"), 1000);
+	});
+}
+fetchData();
+
+// Answer: Wraped the setTimePut ina Promise function which is
+// either resolve or reject. This promise can be called by either
+// .then().catch() or async/await
+
+//  ############ Question 9 ############
+const nums = [1, 2, 3, 4, 5, 6];
+const evenNumbers = nums.filter((num) => num % 2 === 0);
+console.log(`Even numbers: ${evenNumbers}`);
+
+// Answer: I have used filter array methiod to return even number
+// to get the even numbers i have used modular sign which checks for remainders
+// and compare it 0. So if there is no remainder then its even
+
+//  ############ Question 10 ############
+// Answer: The difference between PUT and POST is that POST is used to
+// create a new resource and PUT is used to update/replace existing resouce
