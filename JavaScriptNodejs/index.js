@@ -1,4 +1,3 @@
-questions = [1, 2, 3, 4, 5, 6, 7, 8];
 //  ############ Question 1 ############
 const numbers = [1, 2, 3];
 const result = numbers.map((num) => num * 2);
