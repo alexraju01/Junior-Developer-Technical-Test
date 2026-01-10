@@ -21,6 +21,8 @@ Q24 The following code snippet (the language is irrelevant) could work but faile
 Button deleteButton = new Button(“Delete”)
 template.addCloseButton(deleteButton)
 
+Answer: Not too sure on this one but i have 2 ideas. One being that the delet button inst properly stored as a variable. Another possibitites is that the text inside the string doesn't match with the use case here as this button is used to close as used in the template.addcloseButton so the string should be "close" not "delete".
+
 <!-- ########### Question 25 ########### -->
 
 Q25 What is the difference between Git Merge and Git Rebase
